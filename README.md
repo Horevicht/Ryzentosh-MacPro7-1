@@ -19,7 +19,7 @@ Installation guide for my Ryzentosh build dual-booting macOS Big Sur and Windows
 * **USB mapping:** your hardware will need a different mapping (even if it's the exact model) - at [installation process](#installation-process), you will need `xhciportlimit = true` to functional USB ports » then, at [post-install](#post-install), you gotta do your own mapping process, please refer to [Dortania's USB Mapping guide](https://dortania.github.io/OpenCore-Post-Install/usb/)
 * **Kexts and Drivers:** https://dortania.github.io/OpenCore-Install-Guide/ktext.html#firmware-drivers
 
-## WHAT WE WILL NEED
+# WHAT WE WILL NEED
 * **Masters**
 1. [Opencore Pkg](https://github.com/acidanthera/OpenCorePkg/releases/) - *bootloader*
 2. [ProperTree](https://github.com/corpnewt/ProperTree) - *plist editor*
