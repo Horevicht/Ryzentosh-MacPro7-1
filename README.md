@@ -19,6 +19,7 @@ Last update: 13/09/2021
 * **Kexts and Drivers:** https://dortania.github.io/OpenCore-Install-Guide/ktext.html#firmware-drivers
 
 # Files
+*almost all of them comes in [Builds|Dortania](https://dortania.github.io/builds/?viewall=true)*
 * **Masters**
 1. [Opencore Pkg](https://github.com/acidanthera/OpenCorePkg/releases/) - *bootloader*
 2. [ProperTree](https://github.com/corpnewt/ProperTree) - *plist editor*
