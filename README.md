@@ -31,13 +31,13 @@ Installation guide for my Ryzentosh build dual-booting macOS Big Sur and Windows
 * **Kexts** = you'll need the `.kext` file
 1. [Lilu](https://github.com/acidanthera/Lilu/releases/) - *needed to boot*
 2. [WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases/) - *needed to boot (GPU)*
-3. [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases/) - *needed to boot (to AMD, we just need the `VirtualSMC.kext`without the plugins)*
+3. [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases/) - *needed to boot (to AMD, we just need the `VirtualSMC.kext` without the plugins)*
 4. [AppleALC](https://github.com/acidanthera/AppleALC/releases/) - *audio (generally `alcid=1` as `boot-arg`)*
 5. [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases/) - *amd cpu name in `"about macOS"`, fix memory errors of MacPro7,1 SMBIOS*
 6. [NVMeFix](https://github.com/acidanthera/NVMeFix/releases/) - *optimizes SSD M.2 NVMe power management and such*
 7. [Realtek8111](https://github.com/Mieze/RTL8111_driver_for_OS_X/releases/) - *ethernet*
 8. [AppleMCEReporterDisabler](https://github.com/AMD-OSX/AMD_Vanilla/blob/master/Extra/AppleMCEReporterDisabler.kext.zip) - *when using `MacPro6,1`, `MacPro7,1`, or `iMacPro1,1`, as SMBIOS, `AppleIntelMCEReporter.kext` macOS might panic, so to prevent this you need to either use a different SMBIOS or use that disabler kext*
-9. [SMCAMDProcessor + AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor/releases/) *properly powermanagement and SMC readings (e.g. FAN spins)... besides, it comes with AMD Power Gadget, totally optional, but the other 2 (kexts) are mandatory*
+9. [SMCAMDProcessor + AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor/releases/) - *properly powermanagement and SMC readings (e.g. FAN spins)... besides, it comes with `AMD Power Gadget`, totally optional, but the other 2 (kexts) are mandatory*
 
 * **Drivers and Canopy (GUI)** = you'll need `.efi`files
 1. HfsPlus - *it comes with `OCBinaryData` in `Drivers`*
