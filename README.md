@@ -1,7 +1,6 @@
-# Ryzentosh - MacPro7,1
-Installation guide for my Ryzentosh build dual-booting macOS Big Sur and Windows 10 in non-Apple hardware (AMD in this case). This build is heavily based on [Dortania's OpenCore Guide](https://dortania.github.io/).
+Last update: 13/09/2021
 
-# BUILD / SETUP / SYSTEMS / BOOTLOADER
+# AMD SETUP
 * **Bootloader:** OpenCore 0.7.3
 * **Systems:** macOS BigSur 11.5.2 + Windows 10 Pro
 * **Motherboard/Mobo:** [Gigabyte B450m Gaming V1](https://www.gigabyte.com/br/Motherboard/B450M-GAMING-rev-1x/sp#sp)
@@ -15,11 +14,11 @@ Installation guide for my Ryzentosh build dual-booting macOS Big Sur and Windows
 * **Case:** Caseintosh Power Mac G5
 
 
-# Some previous info
+# Previous info
 * **USB mapping:** your hardware will need a different mapping (even if it's the exact model) - at [installation process](#installation-process), you will need `xhciportlimit = true` to functional USB ports » then, at [post-install](#post-install), you gotta do your own mapping process, please refer to [Dortania's USB Mapping guide](https://dortania.github.io/OpenCore-Post-Install/usb/)
 * **Kexts and Drivers:** https://dortania.github.io/OpenCore-Install-Guide/ktext.html#firmware-drivers
 
-# WHAT WE WILL NEED
+# Files
 * **Masters**
 1. [Opencore Pkg](https://github.com/acidanthera/OpenCorePkg/releases/) - *bootloader*
 2. [ProperTree](https://github.com/corpnewt/ProperTree) - *plist editor*
@@ -38,19 +37,16 @@ Installation guide for my Ryzentosh build dual-booting macOS Big Sur and Windows
 7. [Realtek8111](https://github.com/Mieze/RTL8111_driver_for_OS_X/releases/) - *ethernet*
 8. [AppleMCEReporterDisabler](https://github.com/AMD-OSX/AMD_Vanilla/blob/master/Extra/AppleMCEReporterDisabler.kext.zip) - *when using `MacPro6,1`, `MacPro7,1`, or `iMacPro1,1`, as SMBIOS, `AppleIntelMCEReporter.kext` macOS might panic, so to prevent this you need to either use a different SMBIOS or use that disabler kext*
 9. [SMCAMDProcessor + AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor/releases/) - *properly powermanagement and SMC readings (e.g. FAN spins)... besides, it comes with `AMD Power Gadget`, totally optional, but the other 2 (kexts) are mandatory*
-
 * **Drivers and Canopy (GUI)** = you'll need `.efi`files
 1. HfsPlus - *it comes with `OCBinaryData` in `Drivers`*
 2. OpenCanopy - *it comes with `OpenCore Pkg` in `Drivers`*
 3. OpenRuntime - *needed to boot*
 4. OpenLinuxBoot - *recent, experimental, need careful*
-
 * **ACPI / SSDTs** = `.aml` files
 1. SSDT-EC - *`SSDTTime` and needed to boot*
 2. [SSDT-USBX](https://github.com/dortania/OpenCore-Post-Install/blob/master/extra-files/SSDT-USBX.aml) - *properly USB power management*
 3. SSDT-HPET - *`SSDTTime` with patches on `plist`*
 4. [SSDT-SBUS-MCHC](https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html) - *properly SMBUS support (post-install)*
-
 * **Tools**
 1. [Mount EFI Automator](https://github.com/corpnewt/MountEFI/blob/update/Mount%20EFI%20Automator%20Quick%20Action.zip) - *it becomes a "macOS service", you just gotta select the drive you want in Finder and voilá*
 2. [MountyApp](https://mounty.app/) - *properly NTFS support*
