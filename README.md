@@ -2,7 +2,7 @@ Last update: 13/09/2021
 
 # AMD SETUP
 * **Bootloader:** OpenCore 0.7.3
-* **Systems:** macOS BigSur 11.5.2 + Windows 10 Pro
+* **Systems:** macOS BigSur 11.6 + Windows 10 Pro
 * **Motherboard/Mobo:** [Gigabyte B450m Gaming V1](https://www.gigabyte.com/br/Motherboard/B450M-GAMING-rev-1x/sp#sp)
 * **CPU:** [3,2 GHz AMD Ryzen 5 1600 Six-Core Processor](https://www.amd.com/pt/products/cpu/amd-ryzen-5-1600)
 * **GPU:** [XFX Radeon RX 570 8 GB XXX Edition](https://www.xfxforce.com/gpus/amd-radeon-tm-rx-570-rs-8gb-xxx-edition-2)
