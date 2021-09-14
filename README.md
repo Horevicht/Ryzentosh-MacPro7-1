@@ -1,3 +1,4 @@
+#RYZENTOSH - MacPro7,1 - W10 Pro + macOS BS 11.6
 Last update: 13/09/2021
 
 # AMD SETUP
